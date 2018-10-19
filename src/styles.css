@@ -1,0 +1,9 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+/*esto es q por medio de un id que esta en accpunt-settings, se establese q 
+todo elemnto de ese id va a tener un cursor, el evento click aun no sirve*/
+
+#themecolors a {
+    cursor: pointer;
+}

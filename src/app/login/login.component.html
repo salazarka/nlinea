@@ -1,0 +1,66 @@
+<!-- ============================================================== -->
+<!-- Main wrapper - style you can find in pages.scss -->
+<!-- ============================================================== -->
+<section id="wrapper" class="login-register login-sidebar">
+    <div class="login-box card">
+        <div class="card-body">
+            <!--<form class="form-horizontal form-material" (ngSubmit)="holi()">-->
+            <!-- <a href="javascript:void(0)" class="text-center db"><img src="../assets/images/logo-icon.png" alt="Home" /><br/><img src="../assets/images/logo-text.png" alt="Home" /></a> -->
+            <h4 class="card-title" align="center">N EN LÍNEA</h4>
+            <form name="userform" method="post" #formCtrl="ngForm">
+                <div class="form-group m-t-40">
+                    <div class="col-xs-12">
+                        <!--<input class="form-control" type="text" required="" placeholder="Usuario">-->
+                        <input type="text" class="form-control" [(ngModel)]="user.email" placeholder="Correo electrónico" [ngModelOptions]="{standalone: true}">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-xs-12">
+                        <!--<input class="form-control" type="password" required="" placeholder="Contraseña">-->
+                        <input type="password" class="form-control" [(ngModel)]="user.password" placeholder="Contraseña (min 6 caracteres)" required [ngModelOptions]="{standalone: true}">
+                    </div>
+                </div>
+                <!--</form>-->
+                <div class="form-group text-center m-t-20">
+                    <div class="col-xs-12">
+                        <button class="btn btn-info btn-lg btn-block text-uppercase btn-rounded" type="buton" (click)="signInWithEmail()"> Iniciar Sesión 
+                              </button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 m-t-10 text-center">
+                        <div class="social">
+                            <a href="javascript:void(0)" class="btn  btn-facebook" (click)="signInWithFacebook()" data-toggle="tooltip" title="Login with Facebook"> <i aria-hidden="true" class="fa fa-facebook"></i> </a>
+                            <a href="javascript:void(0)" class="btn btn-googleplus" (click)="signInWithGoogle()" data-toggle="tooltip" title="Login with Google"> <i aria-hidden="true" class="fa fa-google-plus"></i> </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group m-b-0">
+                    <div class="col-sm-12 text-center">
+                        ¿No tenés cuenta? <br>Por favor completá los datos de arriba y dale click al botón "Registrar"
+                        <button class="btn btn-info btn-lg btn-block text-uppercase btn-rounded" type="buton" (click)="signInWithEmailFist()"> Registrar
+                                </button>
+                    </div>
+                </div>
+                <!-- <div class="form-group">
+                    <div class="col-sm-12 text-center">
+                        <a (click)="logoutwithfb()" class="text-primary m-l-5"><b>SALIR</b></a>
+                    </div>
+                </div> -->
+            </form>
+        </div>
+    </div>
+</section>
+
+<section id="wrapper">
+    <div style="text-align:left">
+
+        <canvas #canvasRef center id="stage" width="1000" height="1000"> 
+                </canvas>
+    </div>
+
+</section>
+
+<!-- ============================================================== -->
+<!-- End Wrapper -->
+<!-- ============================================================== -->

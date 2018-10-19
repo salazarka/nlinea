@@ -1,0 +1,22 @@
+<h3>
+    {{ leyenda }} = {{progreso}}
+</h3>
+
+<div class="input-group">
+    <span class="input-group-btn">
+        <button class="btn btn-secondary" type="button" (click)="cambiarValor(-2)">                   
+            <i class="mdi mdi-minus"></i>
+          </button>        
+    </span>
+    <!--Se le pone #txtProgress porque es un nombre de referencia pra el viewChild en el ts-->
+    <input #txtProgress type="number" class="form-control" name="progreso" [(ngModel)]="progreso" (ngModelChange)="onChanges($event)" min='6' max="10">
+    <span class="input-group-btn">
+           <!--btn primary o secondary.. ESTO ES UN BOTON Y TIENE EVENTO -->
+      <button class="btn btn-primary" type="button" (click)="cambiarValor(+2)"> 
+        <!--Formato para poner un icono, puede ser un texto, en ese caso se quita la <i y se pone el texto
+        Estan en el "main: icon material-->
+        <i class="mdi mdi-plus"></i>
+        </button>
+     </span>
+
+</div>

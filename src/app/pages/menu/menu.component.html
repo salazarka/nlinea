@@ -1,0 +1,61 @@
+<div class="row">
+    <div class="card">
+        <div class="card-body">
+            <h3>{{name}}</h3>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-6">
+        <div class="card">
+            <div class="card-body">
+                <!-- <app-incrementador (actualizaValor)="progreso1 = $event" nombre="Tamaño Tablero"></app-incrementador> -->
+                <br>
+                <app-incrementador (actualizaValor)="game.size = $event" nombre="Board Size " [progreso]="game.size"></app-incrementador>
+
+            </div>
+            <div class="card-body">
+                <app-incrementador (actualizaValor)="game.toWin = $event" nombre="Connect N " [progreso]="game.toWin"></app-incrementador>
+
+            </div>
+
+            <div class="card-body">
+                <h4 class="card-title">Game Mode</h4>
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <button class="btn btn-secondary" type="submit" (click)="game.gameMode = 1">1 VS 1</button>
+                </div>
+                 <br>
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <button class="btn btn-secondary" type="submit" (click)="game.gameMode = 1">1 VS COMPUTER EASY</button>
+                </div>
+                <br>
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <button class="btn btn-secondary" type="submit" (click)="game.gameMode = 1">1 VS COMPUTER MEDIUM</button>
+                </div>
+
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <button class="btn btn-secondary" type="submit" (click)="game.gameMode = 1">1 VS COMPUTER DIFFICULT</button>
+                </div>
+            </div>
+            
+            <br>
+            <!-- ESTE BOTÓN DEBE ENCARGARSE DE VALIDAR QUE LOS CAMPOS ESTEN COMPLETOS -->
+            <button class="btn btn-dark" type="submit" (click)="setGame()">NEW GAME</button>
+            <!-- (click)="drawRectable(game.size)" -->
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="card">
+            <h3 class="card-title">Select Color:</h3>
+            <div class="card-body">
+                <h4 class="card-title">Player 1 Color:</h4>
+                <canvas center id="player1" width="100" height="100" [cpPosition]="'right'" [(colorPicker)]="color1" (colorPickerChange)="setColor($event, 'player1')"> </canvas>
+            </div>
+            <div class="card-body">
+                <h4 class="card-title">Player 2 Color:</h4>
+                <canvas center id="player2" width="100" height="100" [cpPosition]="'right'" [(colorPicker)]="color2" (colorPickerChange)="setColor($event, 'player2')"> </canvas>
+            </div>
+        </div>
+    </div>
+
+</div>

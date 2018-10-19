@@ -1,0 +1,69 @@
+/* canvas {
+    border-style: solid;
+    border-color: #000000;
+    border-width: 1px;
+    background-color: #397941;
+    padding: 0;
+    margin: 0;
+} */
+
+body {
+    font-size: 20px;
+    background-color: #ffffff;
+    padding: 0;
+    margin: 0;
+}
+
+div.contents {
+    background-color: #000;
+}
+
+.nav {
+    padding: 0;
+    margin: 0;
+    display: table;
+    width: 300px;
+    color: lightseagreen;
+    list-style: none;
+    font-weight: 700;
+    /*background-color: #000;*/
+}
+
+
+/*-------PARA LAS  TABLAS DE CANT FICHAS-------*/
+
+.nav__item {
+    display: table-cell;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.nav__item2 {
+    margin-right: 20px;
+    color: rebeccapurple;
+}
+
+
+/*-----------------------------------------*/
+
+
+/* 
+.board {
+    margin: 0 auto;
+    width: 768px;
+    height: 768px;
+    background: #5FA64B;
+    border-radius: 2.5%;
+}
+ */
+
+
+/*CUADRO QUE PERMITE TOCAR*/
+
+
+/* .square {
+    float: left;
+    border: 1px solid #111;
+    width: 12.5%;
+    height: 12.5%;
+} */
