@@ -17,6 +17,8 @@
         "mongoose-unique-validator": "^2.0.1"
     },
     "devDependencies": {
-        "nodemon": "^1.18.4"
+        "nodemon": "^1.18.4",
+        "@angular/cli": "1.4.9",
+        "@angular/compiler-cli": "^4.4.6"
     }
 }
